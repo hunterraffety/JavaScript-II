@@ -47,10 +47,12 @@ last(items, function(lastItem) {
 // -- exercise 3
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
-  return x + y;
+  return cb(x + y);
 }
 
-console.log(sumNums(55, 109));
+sumNums(5, 13, function(add) {
+  console.log(add);
+});
 
 // - exercise 4
 function multiplyNums(x, y, cb) {
